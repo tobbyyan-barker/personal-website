@@ -1282,7 +1282,13 @@ function ContactPage() {
           <p>
             个人作品集网站用于展示我的 AI/CV 项目实践、实习经历、技能能力和阶段性成果。
           </p>
-          <p>个人网站链接将在部署完成后更新。</p>
+          <a
+            href="https://personal-website-nine-smoky.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            https://personal-website-nine-smoky.vercel.app/
+          </a>
         </div>
 
         <div className="content-card">

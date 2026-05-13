@@ -1398,11 +1398,11 @@ function ContactPage() {
             个人作品集网站用于展示我的 AI/CV 项目实践、实习经历、技能能力和阶段性成果。
           </p>
           <a
-            href="https://personal-website-nine-smoky.vercel.app/"
+            href="https://personal-website-d3ys.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            https://personal-website-nine-smoky.vercel.app/
+            https://personal-website-d3ys.vercel.app/
           </a>
         </div>
 

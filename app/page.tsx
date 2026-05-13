@@ -295,56 +295,43 @@ function HomeOverview() {
       <section className="project-header">
         <div className="eyebrow">Personal Portfolio</div>
 
-        <h1>Yan Yishun Portfolio</h1>
+        <h2>Yan Yishun Portfolio</h2>
 
         <p className="project-desc">
-          This portfolio presents my work in computer vision, deep learning,
-          academic research, and web development. I focus on practical AI
-          projects that connect data cleaning, model training, result analysis,
-          and deployment.
+          本作品集展示了我在计算机视觉，深度学习和网页开发方面的实践成果。我目前主要关注AI应用落地，重视
+          从数据清洗，硬件选型，模型训练，结果分析，模型部署展示的完整工程流。
         </p>
 
         <p className="project-desc">
-          The website is designed in a Notion / Unity documentation style. The
-          goal is not to create a flashy visual page, but to make each project
-          easy to read, easy to navigate, and easy to understand.
+          本网站采用类似Notion/Unity 官方文档的设计风格，希望用简洁，清晰的方式展示我参与的每个项目的背景,流程，结果和反思。
         </p>
 
         <div className="tags">
           <span>Computer Vision</span>
+          <span>Object Detection</span>
           <span>Deep Learning</span>
           <span>YOLO</span>
-          <span>Data Cleaning</span>
-          <span>Model Training</span>
-          <span>Result Analysis</span>
           <span>Model Deployment</span>
           <span>Web Development</span>
         </div>
 
         <div className="action-row">
-          <a href="https://github.com/" target="_blank" rel="noreferrer">
+          <a href="https://github.com/tobbyyan-barker" target="_blank" rel="noreferrer">
             GitHub
           </a>
-          <a href="/resume.pdf" target="_blank" rel="noreferrer">
-            Resume
+          <a href="mailto:3477953734@qq.com" target="_blank">
+            3477953734@qq.com
           </a>
-          <button type="button">Email</button>
         </div>
       </section>
 
       <section className="detail-section">
         <h2>About This Portfolio</h2>
         <p>
-          This website is organized as a project documentation portfolio. Each
-          project page focuses on four key questions: what problem I worked on,
-          what methods I used, what results I obtained, and what I learned from
-          the process.
+          本网站以项目文档的形式整理我的学习，科研与实习经历。每个项目页面主要回答四个问题：项目想解决什么问题、我采用了哪些方法、最终取得了什么结果，以及这个过程中有哪些经验与反思。
         </p>
         <p>
-          The main project is the nighttime street light detection project from
-          my CV internship. Other projects, including the EI paper project,
-          music genre recognition, and this portfolio website, will be expanded
-          step by step.
+          目前重点展示的是我在计算机视觉实习中完成的夜间路灯检测项目。后续我会继续完善 EI 论文项目、音乐流派识别项目，以及本作品集网站的开发过程记录。
         </p>
       </section>
 
@@ -354,11 +341,18 @@ function HomeOverview() {
           <span>Nighttime Object Detection</span>
           <span>YOLO Model Training</span>
           <span>Dataset Cleaning</span>
-          <span>Annotation Standardization</span>
           <span>Error Case Analysis</span>
+          <span>Model Evaluation</span>
           <span>Model Demo</span>
-          <span>Personal Website</span>
+          <span>Portfolio Website</span>
         </div>
+      </section>
+
+      <section className="detail-section">
+        <h2>Future Interests</h2>
+        <p>
+          未来，我希望进一步探索计算机视觉方向的 AI 应用落地，尤其是目标检测、机器视觉以及能够部署到真实场景中的智能系统。同时，我也对AI与机器人结合, AI Agent辅助模型训练评估等方向感兴趣，希望了解视觉感知如何支持智能决策和自主交互。
+        </p>
       </section>
     </>
   );
@@ -886,81 +880,201 @@ function renderCvSectionContent(sectionId: string) {
       return (
         <section className="detail-section">
           <h2>Deployment & Demo</h2>
+
+          <h3>1. Demo 概述</h3>
           <p>
-            后续计划支持常见图片格式和视频格式输入，包括 .jpg、.jpeg、.png 和 .mp4。
-            输出结果为带有检测框、类别标签和置信度的图片或视频。
+            为了更清晰地展示模型的检测效果，本项目搭建了一个基于网页端的路灯检测 Demo。
+            用户可以在前端页面上传道路图像，点击检测按钮后，系统会调用后端模型完成目标检测，
+            并在页面中展示检测结果图、检测框数量、类别标签和置信度信息。
           </p>
 
           <div className="demo-box">
             <div>
-              <h3>Supported Input</h3>
-              <p>.jpg / .jpeg / .png / .mp4</p>
+              <h3>支持输入</h3>
+              <p>.jpg / .jpeg / .png</p>
             </div>
             <div>
-              <h3>Output</h3>
-              <p>Detection results with bounding boxes and confidence scores.</p>
+              <h3>输出结果</h3>
+              <p>检测结果图、检测框数量、类别标签和置信度信息</p>
             </div>
           </div>
-          <h3>Current Status</h3>
 
+          <h3>2. 系统工作流程</h3>
           <p>
-            当前项目已经完成 YOLO11 模型的本地训练、测试集评估和典型预测结果分析。
-            现阶段模型主要通过 Ultralytics YOLO 命令行进行推理验证，能够对输入图片生成带有检测框的预测结果。
-            由于 Web 端模型部署涉及前端上传、后端推理接口、模型加载和预测结果返回等多个模块，
-            因此该部分将作为项目下一阶段的工程化优化方向继续推进。
+            该 Demo 采用“前端上传图片 + 后端模型推理 + 前端结果展示”的基本流程。
+            前端负责用户交互、图片预览和检测结果渲染；后端负责接收图片文件、
+            调用 YOLO 模型进行推理，并将检测结果返回给前端。
           </p>
 
-          <h3>Planned Deployment Pipeline</h3>
+          <div className="workflow-box">
+            <div className="workflow-step">用户上传道路图片</div>
+            <div className="workflow-arrow">↓</div>
+            <div className="workflow-step">前端页面：HTML5 / CSS / JavaScript</div>
+            <div className="workflow-arrow">↓</div>
+            <div className="workflow-step">通过 POST 请求发送 FormData 到 Flask API</div>
+            <div className="workflow-arrow">↓</div>
+            <div className="workflow-step">后端服务：保存图片并调用 YOLO 模型推理</div>
+            <div className="workflow-arrow">↓</div>
+            <div className="workflow-step">后端返回 JSON 格式检测结果</div>
+            <div className="workflow-arrow">↓</div>
+            <div className="workflow-step">前端解析 JSON 并展示检测结果</div>
+          </div>
+
+          <h3>3. 代码组织结构</h3>
+          <p>
+            Demo 代码按照“前端页面、静态资源、后端接口、模型权重、上传图片和检测结果”
+            进行组织。下面仅展示与本地 Demo 运行直接相关的核心文件，调试脚本和练习文件未放入展示结构中。
+          </p>
+
+          <div className="code-structure-box">
+            <pre>
+              {`yolo_demo/
+      ├── app.py                    # Flask 后端入口，负责图片接收、模型推理和结果返回
+      ├── best.pt                   # 训练好的 YOLO 模型权重
+      ├── templates/
+      │   └── index.html            # 前端页面结构，定义上传区域和结果展示区域
+      └── static/
+          ├── script.js             # 前端交互逻辑：图片预览、FormData 封装、POST 请求和结果渲染
+          ├── style.css             # 页面样式文件，控制布局、卡片、按钮和结果展示效果
+          ├── uploads/              # 保存用户上传的原始图片
+          └── results/              # 保存模型生成的检测结果图片`}
+            </pre>
+          </div>
+
+          <h3>4. 代码链接</h3>
+          <p>
+            项目代码后续已整理并上传至 GitHub，包括 Flask 后端接口、前端页面代码、
+            YOLO 模型推理逻辑和本地运行说明，方便后续复现、展示和持续更新。
+          </p>
+
+          <div className="link-card">
+            <a
+              href= "https://github.com/tobbyyan-barker/nighttime-street-light-detection-demo"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub 仓库：夜间路灯检测 Web Demo
+            </a>
+          </div>
+           
+
+          <h3>5. 实现细节</h3>
+          <p>
+            前端部分采用 HTML5、CSS 和 JavaScript 实现，主要负责图片上传、图片预览、
+            检测结果展示以及检测信息渲染。用户上传的图片会被封装为 FormData，
+            并通过 POST 请求发送给后端 Flask API。
+          </p>
 
           <p>
-            后续计划采用前后端分离的方式搭建 Web Demo。前端页面负责提供图片上传入口、展示原始图片和检测结果；
-            后端服务负责接收图片文件，加载训练好的 YOLO 模型进行推理，并将带有检测框的结果图片或 JSON 格式的检测结果返回给前端。
+            后端部分采用轻量级 Flask API 实现。后端接收到图片后，会先保存上传文件，
+            然后调用训练好的 YOLO 模型进行目标检测，最后将原始图片 URL、检测结果图 URL、
+            检测框数量、类别标签和置信度信息整理为 JSON 格式返回给前端。
+            前端解析 JSON 数据后，将检测结果动态展示在网页中。
           </p>
 
           <div className="table-wrap">
             <table>
               <thead>
                 <tr>
-                  <th>Module</th>
-                  <th>Function</th>
-                  <th>Status</th>
+                  <th>模块</th>
+                  <th>功能</th>
+                  <th>状态</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Frontend Upload</td>
-                  <td>提供图片上传入口，并展示原图与预测结果</td>
-                  <td>Planned</td>
+                  <td>前端页面</td>
+                  <td>提供图片上传入口，并展示原始图片和检测结果图</td>
+                  <td>本地已完成</td>
                 </tr>
                 <tr>
-                  <td>Backend API</td>
-                  <td>接收图片文件，调用模型进行推理</td>
-                  <td>Planned</td>
+                  <td>JavaScript 交互</td>
+                  <td>处理图片预览、FormData 封装、POST 请求和结果渲染</td>
+                  <td>本地已完成</td>
                 </tr>
                 <tr>
-                  <td>Model Inference</td>
-                  <td>加载 YOLO11 模型并输出检测框结果</td>
-                  <td>Tested Locally</td>
+                  <td>Flask API</td>
+                  <td>接收上传图片，调用 YOLO 模型，并返回 JSON 检测结果</td>
+                  <td>本地已完成</td>
                 </tr>
                 <tr>
-                  <td>Result Visualization</td>
-                  <td>返回带检测框的图片或结构化预测结果</td>
-                  <td>Partially Completed</td>
+                  <td>YOLO 推理</td>
+                  <td>加载训练好的模型权重，并生成带检测框的结果图</td>
+                  <td>本地已测试</td>
+                </tr>
+                <tr>
+                  <td>云端部署</td>
+                  <td>将 Demo 部署到云服务器，并开放在线访问链接</td>
+                  <td>计划推进</td>
                 </tr>
               </tbody>
             </table>
           </div>
 
-          <h3>Future Implementation</h3>
+          <h3>6. Demo 预览</h3>
+          <p>
+            目前该 Demo 主要在本地环境运行，已经实现了从图像上传、模型推理到结果可视化展示的完整流程。
+            下方展示本地 Demo 的运行 GIF 动图和典型检测结果，用于说明系统的实际交互过程和模型检测效果。
+          </p>
+
+          <div className="demo-preview-main">
+            <img
+              src="/images/lamp-project/yolo-demo-preview.gif"
+              alt="YOLO Demo 运行预览"
+            />
+            <p>
+              Demo 运行预览：用户上传夜间道路图片后，系统通过 Flask API 调用 YOLO 模型完成检测，
+              并在网页端展示原图、检测结果图、检测目标数量和置信度列表。
+            </p>
+          </div>
+
+          <div className="gallery-grid">
+            <div className="gallery-card">
+              <img
+                src="/images/lamp-project/yolo-demo-interface.png"
+                alt="YOLO Demo 页面界面"
+              />
+              <p>网页端界面：用于本地路灯检测 Demo 的上传和展示页面。</p>
+            </div>
+
+            <div className="gallery-card">
+              <img
+                src="/images/lamp-project/yolo-detection-result.jpg"
+                alt="YOLO 检测结果"
+              />
+              <p>检测结果示例：模型输出带有检测框、类别标签和置信度的结果图。</p>
+            </div>
+          </div>
+
+          <h3>7. 后续部署计划</h3>
+          <p>
+            目前该 Demo 尚未部署到云服务器，但它已经实现了从图像上传、模型推理到结果可视化展示的完整流程，
+            使项目从单纯的模型训练实验进一步转化为可展示的 AI 应用原型。
+          </p>
 
           <p>
-            在后续实现中，可以优先使用 FastAPI 搭建轻量级后端接口，将训练好的 YOLO 权重文件加载到服务端，
-            并通过 POST 接口接收前端上传的图片。模型完成推理后，后端可以返回预测框坐标、类别、置信度，
-            或直接返回绘制好检测框的结果图片。当前阶段先保留本地预测结果展示，后续再逐步补充在线推理功能。
+            后续计划将系统部署到具备合适算力资源的云服务器上，并开放访问链接，方便用户在线体验。
+            初步部署版本将优先支持图片检测功能，以控制服务器带宽、存储压力和模型推理成本。
           </p>
+
+          <p>
+            在进一步扩展中，系统可以支持短视频检测功能。用户上传的视频将限制文件大小，例如小于 10MB。
+            后端可以对视频进行逐帧抽取，调用 YOLO 模型对每一帧进行检测，最后将检测后的图像帧重新合成为视频，
+            并返回给前端进行展示。
+          </p>
+
+          <div className="demo-box">
+            <div>
+              <h3>当前状态</h3>
+              <p>本地网页 Demo 已完成，云端部署将作为下一阶段继续推进。</p>
+            </div>
+            <div>
+              <h3>后续扩展</h3>
+              <p>计划支持云端访问和短视频检测，并加入文件大小限制。</p>
+            </div>
+          </div>
         </section>
       );
-
     case "results-gallery":
       return (
         <section className="detail-section">
@@ -1139,11 +1253,12 @@ function ExperiencePage() {
 
           <ul>
             <li>整理夜间道路场景图像，并筛选适合路灯检测任务的训练样本。</li>
-            <li>使用 Label Studio 自动化标注完成图像标注、标注检查与数据导出。</li>
+            <li>使用 Label Studio 与预标注工具完成图像标注、标注检查与数据导出。</li>
             <li>使用 YOLO11 系列模型进行训练、验证与预测，分析不同版本模型的表现。</li>
             <li>结合 Precision、Recall、mAP50、mAP50-95 等指标评估模型效果。</li>
             <li>分析复杂背景下的误检、漏检和重复框问题，并整理阶段性优化思路。</li>
-            <li>将项目过程整理进个人作品集网站，用于后续展示与总结。</li>
+            <li>搭建本地 Web Demo，实现图片上传、YOLO 模型推理、检测结果返回与网页端可视化展示。</li>
+            <li>将项目过程整理进个人作品集网站，并规划后续云服务器部署方案，用于项目展示、复现和在线体验。</li>
           </ul>
 
           <p>

@@ -1374,3 +1374,14 @@ tr:last-child td {
     max-height: 240px;
   }
 }
+
+.project-image {
+  width: 100%;
+  max-width: 460px;
+  max-height: 480px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 12px;
+}

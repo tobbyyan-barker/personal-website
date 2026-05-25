@@ -2220,12 +2220,12 @@ function renderMusicSectionContent(sectionId: string) {
 
           <div className="project-image-block">
             <img
-              src="/music-project/PANNs-bilstm-architecture.png"
+              src="/music-project/panns-bilstm-architecture.png"
               alt="PANN CNN14 feature extraction and BiLSTM temporal modeling architecture"
               className="project-image"
             />
             <p className="image-caption">
-              Overall architecture of the PANNs CNN14 feature extractor and BiLSTM hybrid classification head.
+              模型整体结构：PANNs CNN14 负责提取音频频域特征，BiLSTM 分类头用于建模时序信息并输出音乐流派预测结果。
             </p>
           </div>
 

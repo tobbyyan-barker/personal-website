@@ -507,12 +507,11 @@ function HomeOverview() {
         <h2>Yan Yishun Portfolio</h2>
 
         <p className="project-desc">
-          本作品集展示了我在计算机视觉，深度学习和网页开发方向的项目实践。我目前主要关注AI应用落地，重视
-          从数据清洗，模型训练，结果分析，模型部署展示的完整工程流程。
+          本作品集展示了我在计算机视觉、深度学习和网页开发方向的项目实践。我目前主要关注AI应用落地，重视从数据清洗、模型训练、结果分析到模型部署展示的完整工程流程。
         </p>
 
         <p className="project-desc">
-          网站整体采用类似Notion/Unity 官方文档的设计风格，希望用简洁，清晰的方式呈现我参与的每个项目的背景,流程，结果和反思。
+          网站整体采用类似Notion/Unity 官方文档的设计风格，希望用简洁、清晰的方式呈现我参与的每个项目的背景、流程、结果和反思。
         </p>
 
         <div className="tags">
@@ -538,10 +537,7 @@ function HomeOverview() {
         <h2>About This Portfolio</h2>
         <p>
           本网站以项目文档的形式整理我的学习，科研与实习经历。每个项目页面主要回答四个问题：项目想解决什么问题、我采用了哪些方法、最终取得了什么结果，以及这个过程中有哪些经验与反思。
-        </p>
-        <p>
-          目前重点展示的是我在计算机视觉实习中完成的夜间路灯检测项目。后续我会继续完善 EI 论文项目、音乐流派识别项目，以及本作品集网站的开发过程记录。
-        </p>
+        </p> 
       </section>
 
       <section className="detail-section">
@@ -560,7 +556,7 @@ function HomeOverview() {
       <section className="detail-section">
         <h2>Future Interests</h2>
         <p>
-          未来，我希望进一步探索计算机视觉方向的 AI 应用落地，尤其是目标检测、机器视觉以及能够部署到真实场景中的智能系统。同时，我也对AI与机器人结合, AI Agent辅助模型训练评估等方向感兴趣，希望了解视觉感知如何支持智能决策和自主交互。
+          未来，我希望进一步探索计算机视觉方向的 AI 应用落地，尤其是目标检测、机器视觉以及能够部署到真实场景中的智能系统。同时，我也对 AI 与机器人结合、AI Agent 辅助模型训练评估等方向感兴趣，希望了解视觉感知如何支持智能决策和自主交互。
         </p>
       </section>
     </>
@@ -582,8 +578,7 @@ function CvProjectPage({
         <h1>Nighttime Street Light Detection Based on YOLO</h1>
 
         <p className="project-desc">
-          本项目是一个面向复杂城市夜间道路场景的计算机视觉实习项目，主要完成夜间路灯目标检测任务。
-          项目包含数据清洗、标注规范统一、YOLO11 模型训练、实验结果分析和模型部署规划等流程。
+          本项目是一个面向复杂城市夜间道路场景的计算机视觉实习项目，主要完成夜间路灯目标检测任务。项目包含数据清洗、标注规范统一、YOLO11 模型训练、实验结果分析和模型部署规划等流程。
           Baseline 模型在测试集上取得了 P=0.854、R=0.750、mAP@0.5=0.839、mAP@0.5:0.95=0.621 的结果，
           并作为后续模型迭代的对照基础。
         </p>
@@ -796,7 +791,7 @@ function renderCvSectionContent(sectionId: string) {
             遮挡、过曝、小目标，以及树干、建筑立柱、车身边缘、装饰灯与相似背景，容易造成的漏检和误检。
           </p>
           <p>
-            本项目主要围绕数据清洗、标注规范统一、ExDark数据集里夜间正负样本补充、 YOLO11 模型训练和结果评估展开。通过多轮数据集调整与实验对比,
+            本项目主要围绕数据清洗、标注规范统一、ExDark 数据集里夜间正负样本补充、 YOLO11 模型训练和结果评估展开。通过多轮数据集调整与实验对比,
             我总结了模型在真实场景里的主要错误来源，为后续模型优化和部署提供依据。
           </p>
         </section>
@@ -826,7 +821,7 @@ function renderCvSectionContent(sectionId: string) {
             <li>
               <h3>阶段 3：YOLO11 模型训练与版本迭代</h3>
               <p>
-                先基于 YOLO11n 模型快速验证，判断 YOLO11 系列模型是否适合这个任务。随后使用 YOLO11s 进行 baseline 训练，并通过补充 ExDark 里面的夜间正样本、背景负样本和 AI 辅助标注与人工复核数据，
+                先基于 YOLO11n 模型快速验证，判断 YOLO11 系列模型是否适合这个任务。随后使用 YOLO11s 进行 Baseline 训练，并通过补充 ExDark 里面的夜间正样本、背景负样本和 AI 辅助标注与人工复核数据，
                 开展多版本实验对比，使训练数据逐步贴近真实业务场景。
               </p>
             </li>
@@ -925,7 +920,7 @@ function renderCvSectionContent(sectionId: string) {
 
           <ul>
             <li>
-              <strong>Version 1:</strong> 基于公开网络资源中的路灯检测数据集建立baseline，
+              <strong>Version 1:</strong> 基于公开网络资源中的路灯检测数据集建立Baseline，
               模型具备较好的基础检测能力。
             </li>
             <li>
@@ -938,7 +933,7 @@ function renderCvSectionContent(sectionId: string) {
             </li>
             <li>
               <strong>Version 4:</strong> 基于 Version 3 模型的主要误检类型，额外补充 28 张背景样本。
-              模型误检情况相较 baseline、Version 2 和 Version 3 均有所下降， 说明针对性补充背景负样本在一定程度上可以压低误检。
+              模型误检情况相较 Baseline、Version 2 和 Version 3 均有所下降， 说明针对性补充背景负样本在一定程度上可以压低误检。
             </li>
           </ul>
         </section>
@@ -951,16 +946,16 @@ function renderCvSectionContent(sectionId: string) {
 
           <h3>Model Selection</h3>
           <p>
-            本项目采用 YOLO11 系列模型作为目标检测 baseline，主要训练 YOLO11n
+            本项目采用 YOLO11 系列模型作为目标检测 Baseline，主要训练 YOLO11n
             和 YOLO11s。其中,YOLO11n参数量较少，可以用于快速评估YOLO11系列模型是否适合这类任务以及部署评估。
-            而YOLO11s参数量更大，特征提取能力更强，适合做本实验的 baseline 模型。
+            而YOLO11s参数量更大，特征提取能力更强，适合做本实验的 Baseline 模型。
           </p>
 
           <h3>Training Configuration</h3>
           <p>
             本项目基于 Ultralytics YOLO 框架进行目标检测模型训练，训练环境主要包括
             Python、PyTorch、CUDA-enabled GPU 和 Ultralytics YOLO 框架。实验过程中主要使用
-            YOLO11s 进行 baseline 训练，同时使用 YOLO11n 进行快速实验与方案验证。
+            YOLO11s 进行 Baseline 训练，同时使用 YOLO11n 进行快速实验与方案验证。
           </p>
 
           <ul>
@@ -1010,14 +1005,14 @@ function renderCvSectionContent(sectionId: string) {
             由于夜间灯杆检测任务中可直接使用的公开数据集较少，本项目没有一开始就追求大规模数据训练，
             而是采用{" "}
             <strong>
-              baseline 基础识别能力建立 → AI 辅助标注 → 人工复核修正 → 数据回灌 → 迭代训练
+              Baseline 基础识别能力建立 → AI 辅助标注 → 人工复核修正 → 数据回灌 → 迭代训练
             </strong>{" "}
             的方式逐步优化模型，使得模型逐步贴近实际业务场景。
           </p>
 
           <p>
-            在第一阶段，本项目先使用已有的公开网络数据集训练 baseline 模型，使模型初步学习 street light / lamp pole
-            的基本外观特征。随后，将 ExDark 数据集中的夜间正样本输入 baseline 模型进行预测，
+            在第一阶段，本项目先使用已有的公开网络数据集训练 Baseline 模型，使模型初步学习 street light / lamp pole
+            的基本外观特征。随后，将 ExDark 数据集中的夜间正样本输入 Baseline 模型进行预测，
             利用模型生成初步检测框，再由人工检查并修正明显错误的预测框，形成新的高质量标注样本。
           </p>
 
@@ -1029,7 +1024,7 @@ function renderCvSectionContent(sectionId: string) {
           <p>
             整体来看，该流程可以理解为一种
             <strong>模型辅助标注与数据回灌结合的迭代训练方法</strong>：
-            先用 baseline 建立基础识别能力，再通过模型预测辅助标注，结合人工复核保证数据质量，
+            先用 Baseline 建立基础识别能力，再通过模型预测辅助标注，结合人工复核保证数据质量，
             最后将修正后的正样本和用于减少误检的背景负样本回灌到训练集中，
             持续推动模型向真实夜间道路场景适配。
           </p>
@@ -1130,7 +1125,7 @@ function renderCvSectionContent(sectionId: string) {
           </p>
           <p>
             Version 3 和 Version 4 在重新引入增强数据并继续补充 ExDark 数据集中合适的夜间正样本，背景负样本后，整体性能有所恢复。其中，Version 3 的 Precision 达到 0.894，高于 Baseline，说明补充背景负样本后， 模型对部分非目标干扰结构的误检有所减少。
-            但是 Version 3 和 Version 4 的 recall 和 mAP50 均低于 baseline, 说明虽然背景负样本有助于减少误检，但模型对小目标、遮挡目标和复杂夜间场景的泛化能力需要进一步优化。而且新增训练数据和原始的验证集，测试集之间仍存在一定的分布差异。
+            但是 Version 3 和 Version 4 的 recall 和 mAP50 均低于 Baseline, 说明虽然背景负样本有助于减少误检，但模型对小目标、遮挡目标和复杂夜间场景的泛化能力需要进一步优化。而且新增训练数据和原始的验证集，测试集之间仍存在一定的分布差异。
           </p>
 
           <h3>Error Analysis</h3>
@@ -1611,10 +1606,10 @@ function renderEiSectionContent(sectionId: string) {
         <section className="detail-section">
           <h2>Project Overview</h2>
           <p>
-            晴朗天气下目标检测的准确度已达到非常高的水平，但在雨，雾，雪等恶劣天气下，现有模型的性能会严重衰退。本研究在图像自适应 YOLO 的 ISP 轻量化自动预测图像处理参数的神经网络模型上，运用正负样本对 YOLOV3 模型进行无偏差训练，以提高模型在现实雾天场景中的检测能力。
+            晴朗天气下目标检测的准确度已达到非常高的水平，但在雨，雾，雪等恶劣天气下，现有模型的性能会严重衰退。本研究在图像自适应 YOLO 的 ISP 轻量化自动预测图像处理参数的神经网络模型上，运用正负样本对 YOLOv3 模型进行无偏差训练，以提高模型在现实雾天场景中的检测能力。
           </p>
           <p>
-            该训练策略训练出的 YOLOV3 模型在真实雾天场景数据集 RTTS 的平均准确度达到了<strong> 42.68% </strong>，相比于 YOLOV3 基线模型, mAP@50 提升了 <strong> 16.09% </strong>，证明了用正负样本混合策略训练目标检测模型在真实的雾天场景下能更好的检测出目标物体。
+            该训练策略训练出的 YOLOv3 模型在真实雾天场景数据集 RTTS 的平均准确度达到了<strong> 42.68% </strong>，相比于 YOLOv3 基线模型, mAP@50 提升了 <strong> 16.09% </strong>，证明了用正负样本混合策略训练目标检测模型在真实的雾天场景下能更好的检测出目标物体。
           </p>
         </section>
       );
@@ -1627,7 +1622,7 @@ function renderEiSectionContent(sectionId: string) {
             自动驾驶需要感知道路车辆、行人、交通对象，但雨，雾，雪等恶劣天气会降低图像质量，导致大部分目标检测器无法感知到周围环境的变化，进而引起事故，这让人们不再相信自动驾驶的安全性和可靠性。
           </p>
           <p>
-            针对这一问题，本项目在原有的 YOLOV3 检测器基础上，引入了图像自适应处理模块，并采用正负样本混合训练的策略，探索模型在真实雾天场景下进行目标检测的能力。
+            针对这一问题，本项目在原有的 YOLOv3 检测器基础上，引入了图像自适应处理模块，并采用正负样本混合训练的策略，探索模型在真实雾天场景下进行目标检测的能力。
           </p>
         </section>
       );
@@ -1639,7 +1634,7 @@ function renderEiSectionContent(sectionId: string) {
 
           <h3>选择 YOLOv3 的原因</h3>
           <p>
-            本项目使用 YOLOv3 作为基线模型，因为 YOLOV3 是原始 YOLO 系列中较成熟的单阶段目标检测模型，
+            本项目使用 YOLOv3 作为基线模型，因为 YOLOv3 是原始 YOLO 系列中较成熟的单阶段目标检测模型，
             在检测速度和精度之间取得良好的平衡。与此同时，本项目的重点是在 YOLOv3 的基础上验证图像自适应处理模块和正负样本混合训练策略对模型目标检测的鲁棒性的提升作用，而不是重新设计、优化目标检测器的网络结构。
           </p>
 
@@ -1649,7 +1644,7 @@ function renderEiSectionContent(sectionId: string) {
           </p>
 
           <p>
-            与此同时，原始高分辨率图像会被直接输入到数字图像处理模块中。该模块根据 ISP 模块预测得到的参数， 对原始图像进行去雾、白平衡、伽马校正、色调、对比度和锐化处理，最后将处理后的图像输入 YOLOV3 检测器完成目标检测。
+            与此同时，原始高分辨率图像会被直接输入到数字图像处理模块中。该模块根据 ISP 模块预测得到的参数， 对原始图像进行去雾、白平衡、伽马校正、色调、对比度和锐化处理，最后将处理后的图像输入 YOLOv3 检测器完成目标检测。
           </p>
 
           <div className="demo-preview-main">
@@ -1879,7 +1874,7 @@ function renderEiSectionContent(sectionId: string) {
                 src="/ei-yolo-project/pascal-voc-train-distribution.png"
                 alt="PASCAL VOC training set category distribution"
               />
-              <h3>PASCAL VOC Training Set</h3>
+              <h3>PASCAL VOC 训练集类别分布</h3>
               <p>训练集中 5 类目标对象的实例分布，用于观察不同类别样本数量是否均衡。</p>
             </div>
 
@@ -1888,7 +1883,7 @@ function renderEiSectionContent(sectionId: string) {
                 src="/ei-yolo-project/pascal-voc-val-distribution.png"
                 alt="PASCAL VOC validation set category distribution"
               />
-              <h3>PASCAL VOC Validation Set</h3>
+              <h3>PASCAL VOC 验证集类别分布</h3>
               <p>验证集中 5 类目标对象的实例分布，用于辅助分析模型验证阶段的类别偏差。</p>
             </div>
 
@@ -1897,7 +1892,7 @@ function renderEiSectionContent(sectionId: string) {
                 src="/ei-yolo-project/pascal-voc-test-distribution.png"
                 alt="PASCAL VOC test set category distribution"
               />
-              <h3>PASCAL VOC Test Set</h3>
+              <h3>PASCAL VOC 测试集类别分布</h3>
               <p>测试集中 5 类目标对象的实例分布，用于评估模型在清晰图像和人工增雾图像上的表现。</p>
             </div>
           </div>
@@ -2585,7 +2580,7 @@ function renderMusicSectionContent(sectionId: string) {
               className="project-image"
             />
             <p className="image-caption">
-              BiLSTM + MFCC, PANNs + Mel 和 PANNs + BiLSTM + Mixup 三个模型的混淆矩阵图.
+              三组音乐流派识别模型的混淆矩阵对比：用于观察不同模型在每个音乐流派上的误分类情况。
             </p>
           </div>
 
@@ -2629,7 +2624,7 @@ function renderMusicSectionContent(sectionId: string) {
                 alt="Reggae Mel Spectrogram"
                 className="spectrogram-image"
               />
-              <p className="image-caption">Reggae 音频片段的梅尔频谱图</p>
+              <p className="image-caption">Reggae 音频片段的梅尔频谱图，用于观察其低频能量分布和节奏纹理特征。</p>
             </div>
 
             <div className="spectrogram-card">
@@ -2638,11 +2633,11 @@ function renderMusicSectionContent(sectionId: string) {
                 alt="Rock Mel Spectrogram"
                 className="spectrogram-image"
               />
-              <p className="image-caption">Rock 音频片段的梅尔频谱图</p>
+              <p className="image-caption">Rock 音频片段的梅尔频谱图，用于与 Reggae 类别进行对比，分析两类音乐在频谱结构上的相似性。</p>
             </div>
           </div>
 
-          <h3>5. 跨域分析测试 --- 基于 Youtube 上流行歌曲的分析</h3>
+          <h3>5. 跨域分析测试 --- 基于 YouTube 上流行歌曲的分析</h3>
           <p>
             为了测试模型在真实场景中的泛化能力，本项目额外构建了一个小规模真实场景测试集，
             从 YouTube 平台收集了 20 首近几年高质量的音乐片段，覆盖 GTZAN 数据集中的 10 个音乐流派。

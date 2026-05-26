@@ -2,6 +2,12 @@
 
 import React, { useState } from "react";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
+function assetPath(path: string) {
+  return `${basePath}${path}`;
+}
+
 type PageKey =
   | "home"
   | "cv-project"
@@ -612,10 +618,7 @@ function CvProjectPage({
           >
             Results
           </button>
-
-          <a href="/report.pdf" target="_blank" rel="noreferrer">
-            Report
-          </a>
+  
         </div>
 
         <ProjectSectionNav
@@ -1147,7 +1150,7 @@ function renderCvSectionContent(sectionId: string) {
           <div className="case-grid">
             <figure className="case-card">
               <img
-                src="/images/lamp-project/baseline-false-positive-bus-edge.png"
+                src={assetPath("/images/lamp-project/baseline-false-positive-bus-edge.png")}
                 alt="False positive caused by bus edge"
               />
               <figcaption>
@@ -1157,7 +1160,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <figure className="case-card">
               <img
-                src="/images/lamp-project/baseline-false-positive-bus-structure.png"
+                src={assetPath("/images/lamp-project/baseline-false-positive-bus-structure.png")}
                 alt="Baseline false positive caused by bus structure"
               />
               <figcaption>
@@ -1167,7 +1170,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <figure className="case-card">
               <img
-                src="/images/lamp-project/false-positive-building.jpg"
+                src={assetPath("/images/lamp-project/false-positive-building.jpg")}
                 alt="False positive caused by tree or building pillar"
               />
               <figcaption>
@@ -1177,7 +1180,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <figure className="case-card">
               <img
-                src="/images/lamp-project/missed-small-target.jpg"
+                src={assetPath("/images/lamp-project/missed-small-target.jpg")}
                 alt="Missed detection caused by small or occluded street light"
               />
               <figcaption>
@@ -1412,7 +1415,7 @@ function renderCvSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/images/lamp-project/yolo-demo-preview.gif"
+              src={assetPath("/images/lamp-project/yolo-demo-preview.gif")}
               alt="YOLO Demo 图片检测运行预览"
             />
             <p>
@@ -1423,7 +1426,7 @@ function renderCvSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/images/lamp-project/server_deploy.png"
+              src={assetPath("/images/lamp-project/server_deploy.png")}
               alt="YOLO Demo 云服务器访问界面"
             />
             <p>
@@ -1433,7 +1436,7 @@ function renderCvSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/images/lamp-project/yolo-demo-video-server-preview1.gif"
+              src={assetPath("/images/lamp-project/yolo-demo-video-server-preview1.gif")}
               alt="YOLO Demo 云服务器视频检测运行预览"
             />
             <p>
@@ -1445,7 +1448,7 @@ function renderCvSectionContent(sectionId: string) {
           <div className="gallery-grid">
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/yolo-demo-interface.png"
+                src={assetPath("/images/lamp-project/yolo-demo-interface.png")}
                 alt="YOLO Demo 页面界面"
               />
               <p>网页端界面：用于路灯检测 Demo 的上传、推理和结果展示页面。</p>
@@ -1453,7 +1456,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/yolo-detection-result.jpg"
+                src={assetPath("/images/lamp-project/yolo-detection-result.jpg")}
                 alt="YOLO 检测结果"
               />
               <p>检测结果示例：模型输出带有检测框、类别标签和置信度的结果图。</p>
@@ -1506,7 +1509,7 @@ function renderCvSectionContent(sectionId: string) {
           <div className="gallery-grid">
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/success-road-1.jpg"
+                src={assetPath("/images/lamp-project/success-road-1.jpg")}
                 alt="普通夜间道路检测结果"
               />
               <h3>普通夜间道路检测</h3>
@@ -1517,7 +1520,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/success-road-2.jpg"
+                src={assetPath("/images/lamp-project/success-road-2.jpg")}
                 alt="多路灯目标检测结果"
               />
               <h3>多路灯目标检测</h3>
@@ -1528,7 +1531,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/success-distance-1.jpg"
+                src={assetPath("/images/lamp-project/success-distance-1.jpg")}
                 alt="远距离小目标检测结果"
               />
               <h3>远距离小目标检测</h3>
@@ -1539,7 +1542,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/success-occlusion-1.jpg"
+                src={assetPath("/images/lamp-project/success-occlusion-1.jpg")}
                 alt="遮挡场景下的路灯检测结果"
               />
               <h3>遮挡场景检测</h3>
@@ -1550,7 +1553,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/success-complex-1.jpg"
+                src={assetPath("/images/lamp-project/success-complex-1.jpg")}
                 alt="复杂城市背景下的路灯检测结果"
               />
               <h3>复杂背景检测</h3>
@@ -1561,7 +1564,7 @@ function renderCvSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/images/lamp-project/success-overview-1.jpg"
+                src={assetPath("/images/lamp-project/success-overview-1.jpg")}
                 alt="整体检测效果展示"
               />
               <h3>整体检测效果</h3>
@@ -1649,7 +1652,7 @@ function renderEiSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/ei-yolo-project/isp-yolo-structure.jpg"
+              src={assetPath("/ei-yolo-project/isp-yolo-structure.jpg")}
               alt="ISP-YOLO 模型结构图"
             />
             <p>
@@ -1678,7 +1681,7 @@ function renderEiSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/ei-yolo-project/isp-yolo-training-process.png"
+              src={assetPath("/ei-yolo-project/isp-yolo-training-process.png")}
               alt="ISP-YOLO 训练流程伪代码"
             />
             <p>
@@ -1871,7 +1874,7 @@ function renderEiSectionContent(sectionId: string) {
           <div className="gallery-grid">
             <div className="gallery-card">
               <img
-                src="/ei-yolo-project/pascal-voc-train-distribution.png"
+                src={assetPath("/ei-yolo-project/pascal-voc-train-distribution.png")}
                 alt="PASCAL VOC training set category distribution"
               />
               <h3>PASCAL VOC 训练集类别分布</h3>
@@ -1880,7 +1883,7 @@ function renderEiSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/ei-yolo-project/pascal-voc-val-distribution.png"
+                src={assetPath("/ei-yolo-project/pascal-voc-val-distribution.png")}
                 alt="PASCAL VOC validation set category distribution"
               />
               <h3>PASCAL VOC 验证集类别分布</h3>
@@ -1889,7 +1892,7 @@ function renderEiSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/ei-yolo-project/pascal-voc-test-distribution.png"
+                src={assetPath("/ei-yolo-project/pascal-voc-test-distribution.png")}
                 alt="PASCAL VOC test set category distribution"
               />
               <h3>PASCAL VOC 测试集类别分布</h3>
@@ -1912,7 +1915,7 @@ function renderEiSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/ei-yolo-project/rtts-box-distribution.png"
+              src={assetPath("/ei-yolo-project/rtts-box-distribution.png")}
               alt="RTTS dataset bounding box distribution"
             />
             <p>
@@ -1987,7 +1990,7 @@ function renderEiSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/ei-yolo-project/rtts-classwise-ap.png"
+              src={assetPath("/ei-yolo-project/rtts-classwise-ap.png")}
               alt="Class-wise AP comparison on RTTS dataset"
             />
             <p>
@@ -2005,7 +2008,7 @@ function renderEiSectionContent(sectionId: string) {
           <div className="gallery-grid">
             <div className="gallery-card">
               <img
-                src="/ei-yolo-project/model-b-rtts-detection.png"
+                src={assetPath("/ei-yolo-project/model-b-rtts-detection.png")}
                 alt="Model B detection result on RTTS"
               />
               <h3>模型 B 在RTTS测试集上检测效果</h3>
@@ -2017,7 +2020,7 @@ function renderEiSectionContent(sectionId: string) {
 
             <div className="gallery-card">
               <img
-                src="/ei-yolo-project/model-c-rtts-detection.png"
+                src={assetPath("/ei-yolo-project/model-c-rtts-detection.png")}
                 alt="Model C detection result on RTTS"
               />
               <h3>模型 C 在RTTS测试集上检测效果</h3>
@@ -2037,7 +2040,7 @@ function renderEiSectionContent(sectionId: string) {
 
           <div className="demo-preview-main">
             <img
-              src="/ei-yolo-project/rtts-overlap-failure.jpg"
+              src={assetPath("/ei-yolo-project/rtts-overlap-failure.jpg")}
               alt="Failure cases with overlapping objects in RTTS"
             />
             <p>
@@ -2215,7 +2218,7 @@ function renderMusicSectionContent(sectionId: string) {
 
           <div className="project-image-block">
             <img
-              src="/music-project/panns-bilstm-architecture.png"
+              src={assetPath("/music-project/panns-bilstm-architecture.png")}
               alt="PANN CNN14 feature extraction and BiLSTM temporal modeling architecture"
               className="project-image"
             />
@@ -2575,7 +2578,7 @@ function renderMusicSectionContent(sectionId: string) {
 
           <div className="project-image-block">
             <img
-              src="/music-project/confusion-matrix-comparison.jpg"
+              src={assetPath("/music-project/confusion-matrix-comparison.jpg")}
               alt="Confusion matrices of BiLSTM MFCC, PANNs Mel, and PANNs BiLSTM Mixup"
               className="project-image"
             />
@@ -2620,7 +2623,7 @@ function renderMusicSectionContent(sectionId: string) {
           <div className="spectrogram-grid">
             <div className="spectrogram-card">
               <img
-                src="/music-project/reggae-mel-spectrogram.jpg"
+                src={assetPath("/music-project/reggae-mel-spectrogram.jpg")}
                 alt="Reggae Mel Spectrogram"
                 className="spectrogram-image"
               />
@@ -2629,7 +2632,7 @@ function renderMusicSectionContent(sectionId: string) {
 
             <div className="spectrogram-card">
               <img
-                src="/music-project/rock-mel-spectrogram.jpg"
+                src={assetPath("/music-project/rock-mel-spectrogram.jpg")}
                 alt="Rock Mel Spectrogram"
                 className="spectrogram-image"
               />
